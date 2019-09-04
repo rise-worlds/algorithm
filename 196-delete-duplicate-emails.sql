@@ -9,9 +9,9 @@ WHERE
 -- DELETE + 子查询，实测效率更高
 DELETE FROM Person
 WHERE Id NOT IN (   -- 删除不在查询结果中的值
-    SELECT id FROM
+    SELECT temp.id FROM
    (
-       SELECT MIN(Id) AS Id -- 排除Email相同时中Id较大的行
+       SELECT MIN(Id) Id -- 排除Email相同时中Id较大的行
        FROM Person
        GROUP BY Email
    ) AS temp    -- 此处需使用临时表，否则会发生报错
