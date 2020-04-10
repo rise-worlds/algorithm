@@ -17,24 +17,24 @@
             "request": "launch",
             "program": "${workspaceRoot}/${fileBasenameNoExtension}.a",
             "args": [],
-            "stopAtEntry": false,
+            // "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
-            "externalConsole": false,
+            // "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
             "miDebuggerArgs": "-q",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": {
-                "task": "clang++ build active file",
-                "type": "shell"
-            }
+            // "setupCommands": [
+            //     {
+            //         "description": "Enable pretty-printing for gdb",
+            //         "text": "-enable-pretty-printing",
+            //         "ignoreFailures": true
+            //     }
+            // ],
+            // "preLaunchTask": {
+            //     "task": "clang++ build active file",
+            //     "type": "shell"
+            // }
         },
     ]
 }
