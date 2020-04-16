@@ -17,14 +17,14 @@ public:
         for (int i = 1; i <= nSize; ++i) {
             if (intervals[i][0] > right) {
                 //区间不重叠，记录区间
-				result.push_back({left, right});
-				left = intervals[i][0];
-				right = intervals[i][1];
+                result.push_back({left, right});
+                left = intervals[i][0];
+                right = intervals[i][1];
             } else {
                 //区间重叠，右移
                 right = max(right, intervals[i][1]);
             }
         }
-		return result;
+        return result;
     }
 };
