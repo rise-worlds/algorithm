@@ -92,4 +92,6 @@
         "memory_resource": "cpp",
         "cinttypes": "cpp"
     },
+    "files.eol": "\n",
+    "files.encoding": "utf8"
 }
