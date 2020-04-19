@@ -12,24 +12,22 @@ public:
             return 1;
         }
 
-        vector<vector<int>> dp(m, vector<int>(n)); //创建大小为m*n的数组
+        vector<int> dp(n);
         // 初始化
-        for (int i = 0; i < m; i++)
-        {
-            dp[i][0] = 1;
-        }
         for (int i = 0; i < n; i++)
         {
-            dp[0][i] = 1;
+            dp[i] = 1;
         }
         // 推导出 dp[m-1][n-1]
         for (int i = 1; i < m; i++)
         {
+            // 第 i 行第 0 列的初始值
+            dp[0] = 1;
             for (int j = 1; j < n; j++)
             {
-                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                dp[j] = dp[j - 1] + dp[j];
             }
         }
-        return dp[m - 1][n - 1];
+        return dp[n - 1];
     }
 };
