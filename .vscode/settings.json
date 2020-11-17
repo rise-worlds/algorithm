@@ -90,7 +90,9 @@
         "set": "cpp",
         "stack": "cpp",
         "memory_resource": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp"
     },
     "files.eol": "\n",
     "files.encoding": "utf8"
